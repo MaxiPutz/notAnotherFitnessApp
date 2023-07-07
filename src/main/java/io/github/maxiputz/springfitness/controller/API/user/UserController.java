@@ -24,7 +24,7 @@ import io.github.maxiputz.springfitness.database.Entity.User.UserService;
 import jakarta.persistence.EntityExistsException;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:8081/")
+@CrossOrigin(origins = "userdb1.cwrp9quarykg.eu-central-1.rds.amazonaws.com")
 @RequestMapping("/api")
 public class UserController {
 

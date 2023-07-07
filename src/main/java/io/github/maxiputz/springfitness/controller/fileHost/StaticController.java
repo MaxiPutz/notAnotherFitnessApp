@@ -20,7 +20,7 @@ import io.github.maxiputz.springfitness.database.Entity.Metadata.Metadata;
 import io.github.maxiputz.springfitness.database.Entity.Metadata.MetadataService;
 import io.github.maxiputz.springfitness.database.Entity.User.UserService;
 
-@CrossOrigin(origins = "http://localhost:8081/")
+@CrossOrigin(origins = "userdb1.cwrp9quarykg.eu-central-1.rds.amazonaws.com")
 @RestController
 public class StaticController {
     @Autowired

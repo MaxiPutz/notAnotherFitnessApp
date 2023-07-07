@@ -18,7 +18,7 @@ import io.github.maxiputz.springfitness.database.Entity.Metadata.MetadataService
 import io.github.maxiputz.springfitness.database.Entity.User.UserService;
 import io.github.maxiputz.springfitness.database.Entity.UsersMetadatas.UsersMetadataService;
 
-@CrossOrigin(origins = "http://localhost:8081/")
+@CrossOrigin(origins = "userdb1.cwrp9quarykg.eu-central-1.rds.amazonaws.com")
 @RequestMapping("/api")
 @RestController
 public class WorkoutInsertController {
