@@ -92,7 +92,7 @@ public class CSVManager {
         StringBuilder csvBuilder = new StringBuilder(headeString + "\n");
 
         for (Metadata metadata : metadataList) {
-            csvBuilder.append(metadata.getId()).append(",");
+            csvBuilder.append(metadata.getWorkoutId()).append(",");
             csvBuilder.append(metadata.getSport()).append(",");
             csvBuilder.append(metadata.getStartTime()).append(",");
             csvBuilder.append(metadata.getAveragePower()).append(",");

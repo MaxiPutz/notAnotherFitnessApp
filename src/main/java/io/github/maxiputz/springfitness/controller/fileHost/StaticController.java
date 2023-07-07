@@ -43,6 +43,20 @@ public class StaticController {
         return html;
     }
 
+    @GetMapping("/app**")
+    public String homePage() throws IOException {
+        // Load the index.html file from the resources folder
+        Resource resource = resourceLoader.getResource("classpath:static/react.html");
+
+        // Read the contents of the file into a string
+        String html = new String(resource.getInputStream().readAllBytes(),
+                StandardCharsets.UTF_8);
+
+        // Return the string as the response body
+        return html;
+
+    }
+
     @GetMapping("/OAuthFlow*")
     public String OAuthFlow() throws IOException {
 
@@ -68,6 +82,9 @@ public class StaticController {
 
         metadatas = metadatas.stream().map(ele -> ele.metadataWithoutCSV()).toList();
         var m = CSVManager.fromMetadataArr("id,lat,long,timerTime,power,speed,heartRate", metadatas);
+        System.out.println(m);
+        m = m.replace("id,lat,long,timerTime,power,speed,heartRate\n", "");
+        System.out.println(m);
         return ResponseEntity.ok().body(new CSVForReact(w, m));
     }
 

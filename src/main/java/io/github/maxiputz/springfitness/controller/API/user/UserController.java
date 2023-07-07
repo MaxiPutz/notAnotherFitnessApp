@@ -60,6 +60,9 @@ public class UserController {
     @PostMapping("/userCreate")
     ResponseEntity<String> userCreate(@RequestBody User req) {
         System.out.println("/userCreate");
+        System.out.println(req.getClientId());
+        System.out.println(req.getClientSecret());
+        // System.out.println(req.ge\);
         var user = userAccessController.getUserFromUsername(req.getUsername());
         if (user.isPresent()) {
             throw new EntityExistsException(user.get().getUsername());
@@ -88,11 +91,16 @@ public class UserController {
             throw new UsernameNotFoundException(req.getUsername());
         }
 
+        if (!user.get().getPassword().equals(req.getPassword())) {
+            System.out.println("password is not correct");
+            throw new UsernameNotFoundException(req.getUsername());
+        }
+
         System.out.println(user.get().getUsername());
         var token = jwtUtils.generateToken(_user);
 
-
-        var metadatas = metadataService.getAllMetadataFromUserId(user.get()).stream().map(ele -> ele.metadataWithoutCSV())
+        var metadatas = metadataService.getAllMetadataFromUserId(user.get()).stream()
+                .map(ele -> ele.metadataWithoutCSV())
                 .toList();
         System.out.println(metadatas.size());
 
