@@ -24,8 +24,8 @@ import io.github.maxiputz.springfitness.database.Entity.User.UserService;
 import jakarta.persistence.EntityExistsException;
 
 @RestController
-@CrossOrigin(origins = "userdb1.cwrp9quarykg.eu-central-1.rds.amazonaws.com")
-// @CrossOrigin(origins = "http://localhost:8081")
+//@CrossOrigin(origins = "userdb1.cwrp9quarykg.eu-central-1.rds.amazonaws.com")
+@CrossOrigin(origins = "http://localhost:8081")
 @RequestMapping("/api")
 public class UserController {
 
@@ -50,6 +50,12 @@ public class UserController {
             @RequestHeader("Authorization") String authorizationHeader) {
 
         System.out.println("/userSetStravaData");
+
+        System.out.println(request.getClientID());
+        System.out.println();
+        System.out.println(request.getClientSecret());
+        System.out.println();
+        System.out.println();
 
         var user = this.getUserFromAuthHeader(authorizationHeader);
 

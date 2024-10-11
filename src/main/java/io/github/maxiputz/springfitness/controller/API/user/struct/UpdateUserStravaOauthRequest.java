@@ -6,7 +6,7 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public class UpdateUserStravaOauthRequest {
-    private String clientId;
+    private String clientID;
     private String clientSecret;
 
     public UpdateUserStravaOauthRequest(){}

@@ -65,9 +65,9 @@ public class ImpUserService implements UserService {
     public void setStravaData(User user, UpdateUserStravaOauthRequest request) {
         System.out.println(user.getUsername());
         System.out.println(user.getId());
-        System.out.println(request.getClientId());
+        System.out.println(request.getClientID());
         System.out.println(request.getClientSecret());
-        repository.setOauthInfo(user.getId(), request.getClientId(), request.getClientSecret());
+        repository.setOauthInfo(user.getId(), request.getClientID(), request.getClientSecret());
     }
 
     @Override

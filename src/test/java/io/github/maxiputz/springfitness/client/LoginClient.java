@@ -61,7 +61,7 @@ public class LoginClient {
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setBearerAuth(jwString);
 
-        String reqBody = String.format("{\"clientId\":\"%s\",\"clientSecret\":\"%s\"}", req.getClientId(),
+        String reqBody = String.format("{\"clientId\":\"%s\",\"clientSecret\":\"%s\"}", req.getClientID(),
                 req.getClientSecret());
 
         System.out.println(reqBody);

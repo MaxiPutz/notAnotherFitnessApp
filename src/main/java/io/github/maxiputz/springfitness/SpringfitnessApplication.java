@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class SpringfitnessApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(SpringfitnessApplication.class, args);
 	}
 
