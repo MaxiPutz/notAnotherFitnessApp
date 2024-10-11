@@ -34,7 +34,7 @@ if you like test the demo app you can klick here <br>
 https://maxiputz.github.io <br>
 
 # Tutorial: Setting Up Not Another Fitness App with Strava API
-![alt text](output3.64315625.gif)
+![output3 64315625](https://github.com/user-attachments/assets/7592ffed-7e3e-454d-a059-060730432494)
 
 # Step 1: Sign up for a Strava Account
 
