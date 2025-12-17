@@ -36,5 +36,6 @@ build/
 /src/main/resources/application.properties
 /src/main/resources/static
 # macOS
+
 *.DS_Store
 
