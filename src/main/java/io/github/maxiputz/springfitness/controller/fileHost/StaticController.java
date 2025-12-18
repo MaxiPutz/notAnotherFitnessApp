@@ -68,6 +68,7 @@ public class StaticController {
     }
 
     @GetMapping("/api/runningApp")
+@CrossOrigin(origins = "http://localhost:8081")
     public ResponseEntity<CSVForReact> getRunningAppData(
             @RequestHeader("Authorization") String authString) {
         var u = userService.getUserFromauthorizationHeader(authString);
