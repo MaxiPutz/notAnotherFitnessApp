@@ -1,0 +1,10 @@
+services:
+  spring-tmp:
+    container_name: "spring-tmp"
+    build:
+        context: .
+    ports:
+      - "8080:8080"        
+    volumes:
+      - ./src/main/resources/application.properties:/app/src/main/resources/application.properties
+    command: ["tail", "-f", "/dev/null"]
