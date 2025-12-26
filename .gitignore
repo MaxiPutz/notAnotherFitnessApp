@@ -38,4 +38,4 @@ build/
 # macOS
 
 *.DS_Store
-
+/fitness.db

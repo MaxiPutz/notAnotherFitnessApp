@@ -39,7 +39,7 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable()
+        http.cors(Customizer.withDefaults()).csrf().disable()
                 .authorizeHttpRequests(conf -> conf
                 .requestMatchers("/api/login", "/api/userCreate", "/**", "/OAuthFlow**", "/app/runningApp**", "/app/RideApp**", "/app" )
                 .permitAll()
